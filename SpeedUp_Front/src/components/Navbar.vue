@@ -1,16 +1,18 @@
 <template>
   <div class="navbar navbar-shadow">
     <div class="navbar-logo">
-        <img class="logo" src=".././assets/speedup.png">
+        <a href="/"><img class="logo" src=".././assets/speedup.png"></a>
     </div>
 
     <div class="navbar-links" :class="{ 'navbar-mobile': isMobile }">
       <div v-if="isMobile" class="navbar-mobile-menu">
-        <button class="navbar-mobile-button" @click="toggleMenu">Menu</button>
-        <ul v-show="isMobile && isMenuOpen" class="navbar-mobile-dropdown">
-          <li><router-link to="/" exact :class="{ active: isActive('/') }">Accueil</router-link></li>
-          <li><router-link to="/AboutUs" :class="{ active: isActive('/AboutUs') }">ontactez-nous</router-link></li>
-          <li><router-link to="/ContactUs" :class="{ active: isActive('/ContactUs') }">Contactez-nous</router-link></li>
+        <a href="javascript:void(0)" class="navbar-mobile-icon" @click="toggleMenu">
+          <i class="fas fa-bars"></i>
+        </a>
+        <ul v-show="isMobile && isMenuOpen" class="navbar-mobile-dropdown navbar-shadow">
+          <li @click="toggleMenu"><router-link to="/" exact :class="{ active: isActive('/') }">Accueil</router-link></li>
+          <li @click="toggleMenu"><router-link to="/AboutUs" :class="{ active: isActive('/AboutUs') }">A propos</router-link></li>
+          <li @click="toggleMenu"><router-link to="/ContactUs" :class="{ active: isActive('/ContactUs') }">Contactez-nous</router-link></li>
         </ul>
       </div>
       <div v-else>
@@ -87,12 +89,11 @@ export default {
 
 .navbar-mobile-dropdown {
   display: none;
-  position: relative;
-  top : 80px;
+  position: absolute;
+  top : 90px;
   left: 0;
   background-color: white;
   padding: 10px;
-  border: 1px solid #C6A732;
   border-top: none;
   width: 100%;
 }
@@ -127,4 +128,13 @@ export default {
   text-decoration: underline;
   color: #C6A732;
 }
+
+.navbar-mobile-icon {
+  font-size: 24px;
+  color: #C6A732;
+  cursor: pointer;
+  margin-left: 400px;
+  position: static;
+}
+
 </style>
