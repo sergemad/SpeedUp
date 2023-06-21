@@ -31,11 +31,13 @@ body {
   align-items: center;
   height: 110px;
   padding: 0 20px;
+  position: relative;
 }
 
 .navbar-shadow {
   box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
+  z-index: 10;
 }
 
 .navbar a {

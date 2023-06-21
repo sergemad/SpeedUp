@@ -96,6 +96,7 @@ export default {
   padding: 10px;
   border-top: none;
   width: 100%;
+  z-index: 9;
 }
 
 .navbar-mobile-dropdown li {

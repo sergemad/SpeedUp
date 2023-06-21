@@ -10,12 +10,11 @@
       <div class="carousel-indicators">
         <div v-for="(page, index) in pages" :key="index" :class="{ active: index === currentPage }" class="indicator"></div>
       </div>
-
-      <div class="carousel-controls">
-        <div class="control previous" @click="previousPage"><i class="fas fa-chevron-left"></i></div>
-        <div class="control next" @click="nextPage"><i class="fas fa-chevron-right"></i></div>
-      </div>
     </div>
+
+      <div class="carousel-control-previous control-left" @click="previousPage"><i class="fas fa-chevron-left"></i></div>
+      <div class="carousel-control-next control-right" @click="nextPage"><i class="fas fa-chevron-right"></i></div>
+
   </div>
 </template>
 
@@ -99,6 +98,25 @@ export default {
   align-items: center;
 }
 
+.carousel-control-previous {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.carousel-control-next {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -122,11 +140,11 @@ export default {
 
 .carousel-controls {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
-.control {
+.control-left {
   background-color: rgba(255, 255, 255, 0.5);
   color: white;
   width: 30px;
@@ -136,14 +154,35 @@ export default {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 50px 5px;
+}
+.control-right {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  margin: 50px 5px;
+  margin-left: auto;
 }
 
-.control:hover {
+.control-left:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.control i {
+.control-left i {
+  font-size: 14px;
+}
+
+.control-right:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.control-right i {
   font-size: 14px;
 }
 </style>
