@@ -122,7 +122,7 @@ export default {
   color: black;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .navbar-links a.active {

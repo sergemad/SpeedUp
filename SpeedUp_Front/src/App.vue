@@ -22,6 +22,9 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  font-family:Arial, Helvetica, sans-serif ;
+  width: auto;
+  height: auto;
 }
 
 .navbar {
@@ -30,12 +33,13 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 110px;
-  padding: 0 20px;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-shadow {
-  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.15);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
   z-index: 10;
 }

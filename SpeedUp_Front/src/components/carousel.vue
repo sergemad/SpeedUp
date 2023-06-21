@@ -1,9 +1,8 @@
 <template>
   <div class="carousel">
     <div class="carousel-page" v-for="(page, index) in pages" :key="index" :class="{ active: index === currentPage }">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.description }}</p>
-      <router-link to="/AboutUs" class="btn">En savoir plus</router-link>
+      <h1 class="page-title">{{ page.title }}</h1>
+      <router-link to="/AboutUs" class="carousel-btn">En savoir plus</router-link>
     </div>
 
     <div class="carousel-navigation">
@@ -25,15 +24,15 @@ export default {
       currentPage: 0, // Indice de la page courante
       pages: [
         {
-          title: 'Page 1',
-          description: 'Description de la page 1'
+          title: 'Livraison rapide pour des achats sans attente !',
+          description: 'achats sans attente !'
         },
         {
-          title: 'Page 2',
+          title: "Acheter à l'international avec SpeedUp",
           description: 'Description de la page 2'
         },
         {
-          title: 'Page 3',
+          title: '" SpeedUp fo aw ka sô "',
           description: 'Description de la page 3'
         }
       ]
@@ -66,25 +65,39 @@ export default {
 .carousel-page {
   background-color: #C6A732;
   color: white;
-  padding: 20px;
+  padding-top: 20px;
   text-align: center;
   display: none;
+  height: 500px;
+  width: 100%;
+  position: relative;
 }
 
 .carousel-page.active {
   display: block;
 }
 
-.btn {
+.page-title{
+  margin-top: 250px;
+  width: 390px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-btn {
   background-color: #C6A732;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 
-.btn:hover {
+.carousel-btn:hover {
   background-color: #B39429;
 }
 
@@ -125,9 +138,9 @@ export default {
 }
 
 .indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 30px;
+  height: 9px;
+  border-radius: 50px;
   background-color: white;
   opacity: 0.6;
   margin: 0 5px;
@@ -155,6 +168,7 @@ export default {
   align-items: center;
   cursor: pointer;
   margin: 50px 5px;
+  margin-bottom: 200px;
 }
 .control-right {
   background-color: rgba(255, 255, 255, 0.5);
@@ -168,6 +182,7 @@ export default {
   cursor: pointer;
   margin: 50px 5px;
   margin-left: auto;
+  margin-bottom: 200px;
 }
 
 .control-left:hover {

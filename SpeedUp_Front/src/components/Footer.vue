@@ -51,12 +51,14 @@ export default {
 <style scoped>
 .footer {
   background-color: #000000;
-  padding: 20px;
-  position: absolute;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
   bottom: 0;
   width: 100%;
   color: white;
   margin-right: 20px;
+  padding-left: 20px;
 }
 
 .footer-content {
@@ -73,6 +75,7 @@ export default {
   border-bottom:solid 1px;
   width: auto;
   margin-right: 40px;
+  padding-bottom: 20px;
 }
 
 .footer-social {
