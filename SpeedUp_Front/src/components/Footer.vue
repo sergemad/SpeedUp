@@ -26,7 +26,7 @@
       </div>
       <div class="footer-content">
         <div class="footer-logo">
-          <img src=".././assets/speedup.png" alt="Company Logo">
+          <a href="/"><img src=".././assets/speedup.png" alt="Company Logo"></a>
         </div>
         <div class="footer-links">
           <router-link to="/AboutUs">About Us</router-link>
