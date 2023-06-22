@@ -7,7 +7,7 @@
 
     <div class="carousel-navigation">
       <div class="carousel-indicators">
-        <div v-for="(page, index) in pages" :key="index" :class="{ active: index === currentPage }" class="indicator"></div>
+        <div v-for="(page, index) in pages" :key="index" :class="{ active: index === currentPage }" class="indicator" @click="goTopage(index)"></div>
       </div>
     </div>
 
@@ -52,6 +52,9 @@ export default {
     },
     nextPage () {
       this.currentPage = (this.currentPage + 1) % this.pages.length
+    },
+    goTopage (index) {
+      this.currentPage = index
     }
   }
 }
