@@ -1,17 +1,18 @@
 <template>
     <div>
       <Carousel></Carousel>
-      <h1>Welcome to our website!</h1>
-      <p>This is the home page.</p>
+      <Services></Services>
     </div>
 </template>
 
 <script>
 import Carousel from './carousel.vue'
+import Services from './Services.vue'
 export default {
   name: 'Home',
   components: {
-    Carousel
+    Carousel,
+    Services
   }
 }
 </script>
