@@ -55,9 +55,8 @@ export default {
   padding-bottom: 30px;
   position: relative;
   bottom: 0;
-  width: 100%;
+  height: 200px;
   color: white;
-  margin-right: 20px;
   padding-left: 20px;
 }
 
