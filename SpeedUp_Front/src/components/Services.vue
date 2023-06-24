@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 class="service-service">Services</h1>
-    <hr class="service-service-separator">
-    <p class="service-service-description">Profitez de nos <span class="service-green">tarifs</span> avantageux pour envoyer vos colis en toute sécurité vers le <span class="service-green">Mali</span>.</p>
+    <h1 class="title">Services</h1>
+    <hr class="title-separator">
+    <p class="title-description">Profitez de nos <span class="title-green">tarifs</span> avantageux pour envoyer vos colis en toute sécurité vers le <span class="title-green">Mali</span>.</p>
     <div class="services">
       <div v-for="(service, index) in services" :key="index" class="service">
         <img :src="require(`.././assets/image${index + 1}.jpg`)" alt="Service Image" class="service-image">
@@ -78,7 +78,7 @@ export default {
   margin-right: auto;
 }
 
-.service-service {
+.title {
   font-size: 60px;
   margin-bottom: 40px;
   color: #C6A732;
@@ -86,15 +86,15 @@ export default {
   text-align: center;
 }
 
-.service-service-description {
+.title-description {
   text-align: center;
   margin-top: 40px;
 }
-.service-green {
+.title-green {
   color: #007B4C;
 }
 
-.service-service-separator {
+.title-separator {
   border: none;
   border-top: 1.5px solid #007B4C;
   margin-bottom: 10px;
