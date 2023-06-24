@@ -71,7 +71,7 @@ export default {
   padding-top: 20px;
   text-align: center;
   display: none;
-  height: 500px;
+  height: 650px;
   width: 100%;
   position: relative;
 }
@@ -81,13 +81,15 @@ export default {
 }
 
 .page-title{
-  margin-top: 250px;
-  width: 390px;
+  margin-top: 300px;
+  width: 600px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
+  margin-bottom: 60px;
 }
 .carousel-btn {
   background-color: #C6A732;
@@ -116,7 +118,7 @@ export default {
 
 .carousel-control-previous {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: 0;
   right: 0;
   display: flex;
@@ -125,7 +127,7 @@ export default {
 }
 .carousel-control-next {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: 0;
   right: 0;
   display: flex;

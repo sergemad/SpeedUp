@@ -1,12 +1,19 @@
 <template>
-  <div class="services">
-    <div v-for="(service, index) in services" :key="index" class="service">
-      <img :src="require(`.././assets/image${index + 1}.jpg`)" alt="Service Image" class="service-image">
-      <h3 class="service-title">{{ service.title }}</h3>
-      <hr class="service-separator">
-      <p class="service-description">{{ service.description }}</p>
-      <i class="fas fa-check"></i>
-      <a :href="`https://api.whatsapp.com/send?phone=${service.whatsappNumber}`" class="service-link">J'en profite</a>
+  <div>
+    <h1 class="service-service">Services</h1>
+    <hr class="service-service-separator">
+    <p class="service-service-description">Profitez de nos <span class="service-green">tarifs</span> avantageux pour envoyer vos colis en toute sécurité vers le <span class="service-green">Mali</span>.</p>
+    <div class="services">
+      <div v-for="(service, index) in services" :key="index" class="service">
+        <img :src="require(`.././assets/image${index + 1}.jpg`)" alt="Service Image" class="service-image">
+        <h3 class="service-title">{{ service.title }}</h3>
+        <hr class="service-separator">
+        <p class="service-description" > <span>{{ service.description }}</span></p>
+        <div v-for="(check, index2) in service.checks" :key="index2" class="service-check">
+          <span class="service-check-text"> <i class="fas fa-check service-check-icon"></i>  {{ check }}</span>
+        </div>
+        <a :href="`https://wa.me/${service.whatsappNumber}`" class="service-link">J'en profite !</a>
+      </div>
     </div>
   </div>
 </template>
@@ -19,42 +26,42 @@ export default {
         {
           image: '.././assets/image1.jpg',
           title: 'Fikaso',
-          description: 'Description du service 1',
+          description: 'Vous souhaitez faire des achats en ligne sans utiliser de carte bancaire ou en évitant son utilisation ?\n \nSpeedUp est là pour vous simplifier la vie !',
           checks: [
             'Envoyez nous les liens des articles via WhatsApp',
             "SpeedUp se charge du paiement et de l'expédition"
           ],
-          whatsappNumber: '1234567890'
+          whatsappNumber: '33612780876'
         },
         {
           image: '.././assets/image2.jpg',
           title: 'Telimani',
-          description: 'Description du service 2',
+          description: `Profitez de la simplicité des achats en ligne ! Choisissez librement votre site web préféré, effectuez le paiement en toute sécurité par carte bancaire, et faites livrer vos articles à l'adresse Speedup.`,
           checks: [
             'Envoyez nous les informations des articles via WhatsApp',
             "SpeedUp se charge de l'expédition dès réception des colis"
           ],
-          whatsappNumber: '1234567890'
+          whatsappNumber: '33612780876'
         },
         {
           image: '.././assets/image3.jpg',
           title: 'Sama kura',
-          description: 'Description du service 3',
+          description: `SpeedUp facilite l'expédition de vos colis - nous nous occupons de tout, du dédouanement à la livraison à Bamako. Profitez d'un service clé en main fiable et efficace pour importer en toute tranquillité.`,
           checks: [
             'Contactez-nous sur WhatsApp',
             'Confiez-nous votre colis',
             "SpeedUp se charge de l'expédition dès réception des colis"
           ],
-          whatsappNumber: '1234567890'
+          whatsappNumber: '33612780876'
         },
         {
           image: '.././assets/image4.jpg',
           title: 'Business',
-          description: 'Description du service 4',
+          description: `Vous êtes une PME ou une grande entreprise et vous souhaitez effectuer des achats à l'étranger ? \nSpeedup est là pour répondre à vos besoins spécifiques en matière d'achats et d'expéditions personnalisés.`,
           checks: [
             "Contactez-nous sur WhatsApp pour plus d'informations"
           ],
-          whatsappNumber: '1234567890'
+          whatsappNumber: '33612780876'
         }
       ]
     }
@@ -64,21 +71,46 @@ export default {
 
 <style scoped>
 .services {
-  margin-top: 150px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
 }
 
+.service-service {
+  font-size: 60px;
+  margin-bottom: 40px;
+  color: #C6A732;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.service-service-description {
+  text-align: center;
+  margin-top: 40px;
+}
+.service-green {
+  color: #007B4C;
+}
+
+.service-service-separator {
+  border: none;
+  border-top: 1.5px solid #007B4C;
+  margin-bottom: 10px;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
 .service {
   width: 24%;
   text-align: center;
   margin-bottom: 20px;
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15);
   border-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+
 }
 
 .service-image {
@@ -88,7 +120,6 @@ export default {
 
 .service-title {
   font-size: 18px;
-  font-weight: bold;
   margin-bottom: 40px;
   color: #C6A732;
   font-size: xx-large;
@@ -104,17 +135,42 @@ export default {
 }
 
 .service-description {
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.service-check {
   margin-bottom: 10px;
+  font-size: small;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.service-check-text {
+  font-size: small;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.service-check-icon {
+  color: #C6A732;
+  display: inline-block;
 }
 
 .service-link {
   display: inline-block;
-  background-color: #C6A732;
-  color: white;
-  padding: 5px 10px;
+  color: #C6A732;
   border-radius: 5px;
   text-decoration: none;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-align: right;
 }
 </style>
