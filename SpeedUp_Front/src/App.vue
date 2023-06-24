@@ -58,4 +58,28 @@ body {
   margin-left: 3%;
 }
 
+.title {
+  font-size: 60px;
+  margin-bottom: 40px;
+  color: #C6A732;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.title-description {
+  text-align: center;
+  margin-top: 40px;
+}
+.title-green {
+  color: #007B4C;
+}
+
+.title-separator {
+  border: none;
+  border-top: 1.5px solid #007B4C;
+  margin-bottom: 10px;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
 </style>
