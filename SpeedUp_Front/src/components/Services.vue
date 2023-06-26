@@ -95,11 +95,10 @@ export default {
 }
 
 .service-title {
-  font-size: 18px;
   margin-bottom: 40px;
   color: #C6A732;
   font-size: xx-large;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .service-separator {
@@ -148,5 +147,22 @@ export default {
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: right;
+}
+
+@media screen and (max-width: 850px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.15);
+    border-top: 1px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 </style>

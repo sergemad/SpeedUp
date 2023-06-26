@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     checkMobile () {
-      this.isMobile = window.innerWidth <= 768 // Ajustez la valeur de 768 selon vos besoins
+      this.isMobile = window.innerWidth <= 850 // Ajustez la valeur de 768 selon vos besoins
     },
     isActive (route) {
       return this.$route.path === route
@@ -107,7 +107,7 @@ export default {
   margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .navbar-links div:not(.navbar-mobile-menu) {
     display: none;
   }
@@ -134,7 +134,8 @@ export default {
   font-size: 24px;
   color: #C6A732;
   cursor: pointer;
-  margin-left: 400px;
+  margin-left: auto;
+  margin-right: 40px;
   position: static;
 }
 
