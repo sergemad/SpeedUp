@@ -54,13 +54,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   margin-top: 60px;
 }
 
 .table {
-  width: 30%; /* Ajustez la largeur du tableau principal */
+  width: 40%; /* Ajustez la largeur du tableau principal */
   text-align: center;
+  height: 30%;
 }
 
 .table.table1 {
@@ -91,6 +92,7 @@ export default {
 .table tr.last-row {
   background-color: #C6A732;
   color: white;
+  height: 50px;
 }
 
 .table tr.second-row1 {
@@ -118,5 +120,25 @@ export default {
   border: 1.50px solid white;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+  .tarifs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table.table1 {
+  height: 200px; /* Ajustez la largeur spécifique du tableau 1 */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.table.table2 {
+  height: 100px;/* Ajustez la largeur spécifique du tableau 2 */
+  margin-right: auto;
+  margin-left: auto;
+}
 }
 </style>
