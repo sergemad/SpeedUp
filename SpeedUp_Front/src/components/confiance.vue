@@ -1,65 +1,78 @@
 <template>
-  <div class="division">
-    <div class="left-side">
-      <img src=".././assets/conf.jpg" alt="Image">
-      <p class="description">Description de gauche</p>
-    </div>
-    <div class="right-side">
-      <p class="description">Description de droite</p>
-    </div>
+  <div>
+      <h1 class="title">Faites nous confiance</h1>
+      <hr class="title-separator">
+      <div class="confiance">
+        <div class="upper-section"></div>
+        <div class="separation"></div>
+        <div class="confiance-container">
+          <div class="image-container">
+            <img src=".././assets/conf.jpg" alt="Image">
+          </div>
+          <p class="description">Description de l'image</p>
+        </div>
+        <div class="lower-section"></div>
+      </div>
   </div>
 </template>
 
 <style scoped>
-.division {
-  display: flex;
-  align-items: center;
+.confiance {
+  position: relative;
+  height: 70vh; /* Ajustez la hauteur selon vos besoins */
   overflow: hidden;
-  position: relative;
 }
 
-.left-side,
-.right-side {
-  flex: 1;
-  position: relative;
-  height: 100vh; /* Ajustez la hauteur selon vos besoins */
+.upper-section,
+.lower-section {
+  height: 50%;
 }
 
-.left-side {
-  background-color: #C6A732; /* Couleur du côté gauche */
+.upper-section {
+  background-color: white; /* Couleur de la partie supérieure */
+  height: 50%;
+}
+
+.lower-section {
+  background-color: #C6A732; /* Couleur de la partie inférieure */
+  border-top-right-radius: 1ch;
+  height: 50%;
+}
+
+.confiance-container {
+  display: flex;
+  justify-content: space-between;
+}
+.image-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-30%, -30%);
   z-index: 1;
 }
 
-.right-side {
-  background-color: white; /* Couleur du côté droit */
-  z-index: 2;
+img {
+  width: 400px;
+  height: auto;
 }
 
 .description {
+  position: absolute;
+  bottom: 20px;
+  left: 65%;
+  top: 20%;
+  transform: translateX(-50%);
   text-align: center;
-  color: white; /* Couleur du texte */
-  padding: 20px;
+  color: black;
 }
 
-.left-side:before,
-.right-side:before {
-  content: "";
+.separation {
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 200%; /* Ajustez la largeur selon vos besoins */
-  background-color: white; /* Couleur de la ligne oblique */
-  transform: skewX(-45deg); /* Angle de la ligne oblique */
-}
-
-.left-side:before {
   right: 0;
-  transform-origin: bottom right;
-}
-
-.right-side:before {
-  left: 0;
-  transform-origin: bottom left;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-83deg);
+  background-color: white; /* Couleur de la séparation */
 }
 </style>
-
