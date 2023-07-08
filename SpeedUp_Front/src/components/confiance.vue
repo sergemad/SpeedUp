@@ -9,7 +9,12 @@
           <div class="image-container">
             <img src=".././assets/conf.jpg" alt="Image">
           </div>
-          <p class="description">Description de l'image</p>
+          <div class="description">
+            <p class="description-title">Une solution à tous vos problèmes</p>
+            <span class="desc-check-text"> <i class="fas fa-check desc-check-icon"></i>  Choisissez l'offre adaptée à vos besoins et contactez-nous sur WhatsApp</span>
+            <span class="desc-check-text"> <i class="fas fa-check desc-check-icon"></i>  Nous traitons vos commandes dès validation de votre facture</span>
+            <span class="desc-check-text"> <i class="fas fa-check desc-check-icon"></i>    Recevez vos commandes en seulement 5 jours ouvrés après réception de vos colis chez nous</span>
+          </div>
         </div>
         <div class="lower-section"></div>
       </div>
@@ -19,7 +24,7 @@
 <style scoped>
 .confiance {
   position: relative;
-  height: 70vh; /* Ajustez la hauteur selon vos besoins */
+  height: 400px; /* Ajustez la hauteur selon vos besoins */
   overflow: hidden;
 }
 
@@ -30,13 +35,13 @@
 
 .upper-section {
   background-color: white; /* Couleur de la partie supérieure */
-  height: 50%;
+  height: 20%;
 }
 
 .lower-section {
   background-color: #C6A732; /* Couleur de la partie inférieure */
   border-top-right-radius: 1ch;
-  height: 50%;
+  height: 80%;
 }
 
 .confiance-container {
@@ -58,21 +63,36 @@ img {
 
 .description {
   position: absolute;
-  bottom: 20px;
-  left: 65%;
-  top: 20%;
+  left: 72%;
+  top: 10px;
   transform: translateX(-50%);
-  text-align: center;
+  right: -100px;
+}
+.description-title {
+  bottom: 20px;
   color: black;
+  font-weight: bold;
+  font-size: xx-large;
 }
 
 .separation {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
+  top: -100px;
+  width: 200%;
   height: 100%;
-  transform: skewX(-83deg);
+  transform: skewX(70deg);
   background-color: white; /* Couleur de la séparation */
+}
+
+.desc-check-text {
+  font-size: medium;
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.desc-check-icon {
+  color: #007B4C;
+  display: inline-block;
 }
 </style>
